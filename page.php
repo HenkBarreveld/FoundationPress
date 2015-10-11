@@ -41,6 +41,9 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-	<?php get_sidebar(); ?>
+<!-- ***********************************
+     ***** Mod for BC Star website *****
+     *********************************** -->
+	<?php get_sidebar( 'right' ); ?>
 </div>
 <?php get_footer(); ?>

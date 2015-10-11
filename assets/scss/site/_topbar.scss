@@ -47,3 +47,51 @@
 @media only screen and (max-width: $topbar-breakpoint) {
   body.offcanvas .top-bar { display: none; }
 }
+
+/*************************************
+ ***** Added for BC Star website *****
+ *************************************
+ * Completely different topbar menu coloring
+ *
+ * We use simple menus: one level submenu; no search forms, buttons, ...
+ *
+ * Menu item background colors dependent on hover only:
+ *  top-bar-menu:        $bcstar-topbar-color
+ *  top-bar-menu, hover: $bcstar-topbar-color-sub
+ *  sub-menu:            $bcstar-topbar-color-sub
+ *  sub-menu, hover:     $bcstar-topbar-color-sub-sub
+ *
+ * Menu text colors only dependent on page hierarchy:
+ *  current page or ancestor:  $topbar-link-color-active
+ *  all other page menu items: $topbar-link-color
+ */
+// Reset all
+#topbar, #topbar * {
+    color: transparent;
+    background: transparent;
+}
+// Set menu background colors
+#topbar {
+    background: $bcstar-topbar-color;
+    .top-bar-menu>.menu-item:hover {
+        background: $bcstar-topbar-color-sub;
+    }
+    .sub-menu>.menu-item {
+        background: $bcstar-topbar-color-sub;
+        &:hover {
+            background: $bcstar-topbar-color-sub-sub;
+        }
+    }
+}
+// Set menu text colors
+#topbar {
+    .menu-item a {
+        color: $topbar-link-color;
+    }
+    .top-bar-menu>.current-menu-item>a,
+    .menu-item.current-page-ancestor>a,
+    .menu-item.current_page_parent:not(.current_page_ancestor) >a,
+    .menu-item.current-page-ancestor .menu-item.current_page_item>a {
+        color: $topbar-link-color-active;
+    }
+}

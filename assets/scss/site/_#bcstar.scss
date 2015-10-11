@@ -1,0 +1,687 @@
+/* -------------------------------------------------------------------------------------------
+ * Overview
+ *
+ *   - General
+ *   - Masthead and topbar
+ *   - Content styling
+ *   - Some additional footer styling
+ *   - "Nieuws" pages
+ *   - Entry-meta (date, time, author)
+ *   - "Uitslagen" pages
+ *   - Sidebar navigation, news feed lists, feed list and feed item style buttons on Start page
+ *   - Plugin Collapse-O-Matic
+ *   - Plugin Folder Gallery and Fancybox 2 (fancyapps.com/fancybox)
+ *   - Plugin Contact Form 7 and contact pages
+ *   - Plugin Cookie Notice
+ *   - Plugin Subscribe 2
+ *   - Plugin TablePress
+ * -------------------------------------------------------------------------------------------
+*/
+
+/* -------------------------------------------------------------------------------------------
+ * General
+ */
+
+a {
+    outline: 0;
+}
+/* -------------------------------------------------------------------------------------------
+ * Masthead and topbar
+ */
+
+/*
+ Masthead, added to parts > top-bar.php
+ */
+
+.f-topbar-fixed .masthead {
+    display: none;      // To remove a strange effect on iOS: If topbar is fixed, the masthead
+    // appears behind and partly below it. It looks like (undocumented!)
+    // that the tag body has class .f-topbar-fixed if topbar has class fixed.
+
+}
+.masthead {
+    background: $bcstar-masthead-color;
+}
+.site-logo {
+    line-height: 11rem;
+}
+.site-name a {
+    font-family: $header-font-family;
+    font-size: 4.5rem;
+    font-weight: $font-weight-normal;
+    @media #{$large-up} {
+        font-size: rem-calc(96);
+    }
+    line-height:12rem;
+    color:$white;
+}
+/*
+ * Topbar
+ * See also scss > site > _topbar.scss
+ */
+
+// Allow menu in topbar to overflow to a second line
+.top-bar {
+    height: auto;
+    min-height: $topbar-height;
+    .title-area {
+        display: none;
+    }
+/*    ul {
+        background: $topbar-bg-color;
+    } */
+}
+// Name and logo in topbar only when "fixed"
+#topbar .logo {
+    display: none;
+}
+#topbar.fixed .logo {
+    display: inline;
+    padding: 0 $topbar-link-padding;
+    img {
+        margin-right: rem-calc(6);
+        vertical-align: middle;
+    }
+    span {
+        color: $white;
+        font-size: $topbar-link-font-size;
+        font-weight: $font-weight-normal;
+        line-height: $topbar-height;
+        vertical-align: middle;
+    }
+}
+// Heights of submenu
+.top-bar .sub-menu li {
+    a {
+        line-height: 2rem !important;
+    }
+    &:last-child a {
+        padding-bottom: 0.5rem !important;
+    }
+}
+/*
+ * Menu icon in tab bar
+ */
+.star-menu-icon:after {
+    position: absolute;
+    padding: $tabbar-middle-padding;
+    font-family: FontAwesome;
+    font-size: 200%;
+    color: $tabbar-color;
+    top: 0;
+    left: 0;
+    width: $tabbar-icon-width;
+    height: $tabbar-icon-width;
+    line-height: $tabbar-line-height;
+    content: "\f0c9";      // fa-bars
+}
+.star-menu-icon[aria-expanded="true"]:after {
+    content: "\f00d";      // fa-times
+}
+/* -------------------------------------------------------------------------------------------
+ * Content styling
+ */
+
+// No header on page (different fom blog, single, archive, search)
+
+body.page header {
+    display: none;
+}
+
+// Styling of articles
+
+$article-bottom-margin: 2rem;
+.inner-wrap {
+    background: $inner-wrap-bg;
+}
+div[role="main"] article {
+    padding: 2rem 2rem 1rem 2rem;
+    background: $white;
+    margin: 0 0 $article-bottom-margin 0;
+    .entry-content {
+        overflow-x: hidden;
+        overflow-y: auto;                 // Prevent images going through the bottom of articles 
+    }
+}
+// Styling of scroll-to-top button added to header.php
+ 
+a.scroll-to-top {
+    display: none;
+}
+.f-topbar-fixed a.scroll-to-top {
+    background: rgba($button-bg-color, 0.5);
+    &:hover {
+        background: rgba($button-bg-color, 1.0);
+    }
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 120px;
+    z-index: 99999;
+    padding: 3px 6px 6px 6px;
+    &::before {
+        font-family: FontAwesome;
+        content: "\f062"; // fa-arrow-up
+    }
+}
+
+// Some widget styling
+
+#sidebar article {
+    margin-bottom: 1rem;
+    &:last-of-type {
+        margin-bottom: $article-bottom-margin;
+    }
+}
+.widget_text .widget-title {
+    display: none;                               // Hide the title of text widgets
+}
+// Some additional table styling
+// Note: styling of TablePress tables in separate section (affects more tha table contents)
+
+table {
+    td {
+        vertical-align: top;
+    }
+    &.no-rows {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        tr {
+            background: transparent;
+            td {
+                padding: rem-calc(0 10 0 0);
+                line-height: $paragraph-line-height;
+            }
+        }
+    }
+    &.star-rows {
+        width: 100%;
+        margin: $paragraph-margin-bottom 0;
+        td {
+            vertical-align: middle;
+            p {
+                margin: 0;                       // TinyMCE Advanced sometimes creates paragraphs inside cells
+            }
+        }
+    }
+    &.tableizer-table {                          // Tables produced with http://tableizer.journalistopia.com/
+        border: 0;
+        tbody {
+            border-style: $table-border-style;
+            border-size: $table-border-size;
+            border-color: $table-border-color;
+        }
+        overflow-x: auto;
+        display: block;
+        box-sizing: content-box;
+        th {
+            background: $table-border-color;
+            color: $header-font-color;
+            font-size: 67%;
+            text-align: center;
+        }
+        tr {
+            &:nth-child(even) {
+                background: transparent;
+            }
+            &:nth-child(odd) {
+                background: $table-even-row-bg;
+            }
+        }
+    }
+    &.scrollable {
+        overflow-x: auto;                        // Use if table could be too wide for smaller screens
+        display: block;                          // Default for .tableizer-table
+    }
+}
+// Class star-rows for non-tables
+
+div.star-rows {
+    border: 2px solid $table-border-color;
+    margin: $paragraph-margin-bottom 0;
+    p {
+        margin: 0;
+        padding: $table-row-padding;
+        line-height: $table-line-height;
+        &:nth-child(even) {
+            background: $table-even-row-bg;
+        }
+    }
+}
+// Some additional inline list styling
+
+ul.inline-list.width-10rem {
+    li {
+        width: 29%;                          // To create inline lists with fixed width columns
+        min-width: 10rem;
+        line-height: 1.125rem;
+        padding: 0.375rem 0;
+    }
+}
+// Images in posts and pages
+// Partly overrides the wp-caption settings in
+//   - assets/scss/config/_wp-overrides.scss
+//   - assets/scss/site/_global.scss
+
+div.wp-caption {
+    padding: $paragraph-margin-bottom $paragraph-margin-bottom 1px $paragraph-margin-bottom;
+    max-width: 100% !important;
+    background: $table-even-row-bg;
+    &.alignright {
+        margin: 0 0 $paragraph-margin-bottom $column-gutter;
+    }
+    &.alignleft {
+        margin: 0 $column-gutter $paragraph-margin-bottom 0;
+    }
+}
+.entry-content img {
+    margin-bottom: $paragraph-margin-bottom;
+}
+p.wp-caption-text {
+    margin: -$paragraph-margin-bottom 0 0 0;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+// Page blocks (Start page and other pages)
+
+.page-block {
+    border: 0px solid $header-color;
+    padding: $paragraph-margin-bottom $paragraph-margin-bottom 1px $paragraph-margin-bottom;
+    background: $inner-wrap-bg;
+    margin-bottom: 2rem;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    &.red {
+        background: #fbe5eb;  // colors made on http://paletton.com using #dee9f2 as base color
+    }
+    &.orange {
+        background: #fff5e8;
+    }
+    &.yellow {
+        background: #fffde8;
+    }
+    &.green {
+        background: #eefbe5;
+    }
+    &.blue {
+        background: $inner-wrap-bg;
+    }
+    &.magenta {
+        background: #e8dff3;
+    }
+    &.blank {
+        background: $white;
+        border: 2px solid $inner-wrap-bg;
+    }
+}
+/* -------------------------------------------------------------------------------------------
+ * Some additional footer styling
+ */
+
+#footer-container {
+    margin: 0;
+    width: 100%;
+    background: $bcstar-topbar-color;
+}
+#footer-container #footer {
+    margin-top: 0;
+    padding: $paragraph-margin-bottom 0 0 0;
+    p {
+        font-size: $topbar-link-font-size;
+        font-weight: $topbar-link-weight;
+        color: $white;
+        a, a:active, a:focus {
+            color: $white;
+        }
+        a:hover {
+            color: $bcstar-topbar-active-color;
+        }
+    }
+}
+/* -------------------------------------------------------------------------------------------
+ * "Nieuws" pagina
+ */
+/*
+ * News page widgets
+ */
+#sidebar-right article {
+    margin: 0;
+    border-bottom: 2px solid $white;
+    padding: 1rem 0 0 0;
+    &:first-of-type {
+        border-top: 2px solid $white;
+    }
+    >div {
+        padding: 0;
+    }
+    h6 {
+        margin: 0 0 1rem 0;
+    }
+    .icons {
+        float: right;
+        font-size: 1.2em;
+    }
+    &.widget_jal_widget {
+        margin-bottom: -1rem;
+        border: 0;
+        padding-bottom: 0;
+    }
+}
+/*
+ * News page pagination
+ */
+div.pagination-centered {
+    margin-bottom: $article-bottom-margin;
+}
+/* -------------------------------------------------------------------------------------------
+ * Entry-meta (date, time, author)
+ */
+
+.entry-meta {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+/* -------------------------------------------------------------------------------------------
+ * "Uitslagen" pages
+ */
+
+ul.speeldagen {
+    display: table;
+    margin-left: 6rem;
+    li {
+        display: table-cell;
+        min-width: rem-calc(60);
+        float: left;
+        padding-right: 1rem;
+        &:first-child {
+            margin-left: -6rem;
+            width: 6rem;
+        }
+    }
+}
+ul.speeldagen.wide {
+    li {
+        min-width: rem-calc(190);
+        &:first-child {
+            min-width: 6rem;
+        }
+    }
+}
+li.p_d {
+    padding-bottom: 0;
+    table {
+        float: right;
+        td {
+            background: scale-color($inner-wrap-bg, $lightness: 50%);
+        }
+    }
+}
+/* -------------------------------------------------------------------------------------------
+ * Sidebar navigation, news feed lists, feed list and feed item style buttons on Start page
+ */
+
+aside {
+    .current-menu-item, .current-page-ancestor {
+        a {
+            color: $header-color;
+            font-style: italic;
+        }
+    }
+}
+.feed-list,
+aside .menu {
+    margin: 0;
+    list-style-type: none;
+    padding-bottom: $paragraph-margin-bottom;
+}
+.feed-item-date {
+    float: right;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    margin-left: 1rem;
+}
+.feed-list li,
+article.widget_nav_menu .menu-item {
+    border-top: 2px solid $white;
+    &:last-child {
+        border-bottom: 2px solid $white;
+    }
+    :hover {
+        background-color: $white;
+        @include single-transition(background-color, 300ms, ease-out);
+    }
+    a {
+        position: relative;
+        display: block;
+        padding: 3px;
+    }
+}
+.feed-list-style.button {
+    background: $inner-wrap-bg;
+    border: 2px solid $inner-wrap-bg;
+    color: $anchor-font-color;
+    &:hover {
+        background: $white;
+        color: $anchor-font-color-hover;
+    }
+}
+.feed-item-style.button {
+    background: transparent;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: $anchor-font-color;
+    border-width: 3px 0;
+    border-style: solid;
+    border-color: $white;
+    &:hover {
+        background: $white;
+        color: $anchor-font-color-hover;
+    }
+}
+/* -------------------------------------------------------------------------------------------
+ * Plugin Collapse-O-Matic
+ */
+
+$collapsomatic-padding: 0 0 0 1.5rem;
+
+.collapseomatic {
+    position: relative;
+    padding: $collapsomatic-padding;
+    color: $anchor-font-color;
+}
+.collapseomatic::before {
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: 100%;
+    top: 0;
+    left: 0;
+    content: "\f0da"; // fa-caret-right
+}
+.colomat-close::before {
+    content: "\f0d7"; // fa-caret-down
+}
+.colomat-hover {
+    color: $anchor-font-color-hover;
+    text-decoration: none;
+}
+.collapseomatic_excerpt {
+    margin: -0.8rem 0 rem-calc(8) 0;
+    padding: $collapsomatic-padding;
+    font-size: 70%;
+    &.excerpt-right {
+        text-align: right;
+    }
+}
+.collapseomatic_content {
+    margin: 0;
+}
+/* -------------------------------------------------------------------------------------------
+ * Plugin Folder Gallery and Fancybox 2 (fancyapps.com/fancybox)
+ */
+
+.fg_thumbnail {
+    display: inline-block;
+    float: none;
+    margin-right: 1px !important;
+}
+.fg_thumbnail img {
+    box-sizing: content-box;
+    vertical-align: middle;
+    max-width: 154px !important;
+    max-height: 154px !important;
+    width: auto !important;
+    height: auto !important;
+}
+.fancybox-skin {
+    padding: 10px !important;
+}
+/* -------------------------------------------------------------------------------------------
+ * Plugin Contact Form 7 and contact pages
+ */
+
+.wpcf7 p,
+.wpcf7 td {
+    margin: 1.5em 0;
+}
+.wpcf7 input,
+.wpcf7 textarea {
+    margin: 0;
+}
+.wpcf7 p.hide,
+.wpcf7 p.add-file {
+    margin: 0.3em 0;
+}
+.wpcf7 p .wpcf7-textarea {
+    resize: vertical;
+}
+.wpcf7 p input.wpcf7-file {
+    font-size: 75%;
+}
+.wpcf7 p span.information {
+    font-size: 75%;
+    font-style: italic;
+}
+.wpcf7 div.wpcf7-response-output {
+    margin: 2em 0 1em 0;
+}
+/* -------------------------------------------------------------------------------------------
+ * Plugin Cookie Notice
+ */
+
+#cookie-notice {
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    height: auto;
+    z-index: 100000;
+    text-align: center;
+    background: $goud !important;
+    color: $bcstar-topbar-color !important;
+    font-size: rem-calc(9);
+    line-height: rem-calc(15);
+    #cn-notice-text {
+        color: $bcstar-topbar-color;
+    }
+    #cn-accept-cookie,
+    #cn-more-info {
+        font-size: rem-calc(9);
+        margin: 2px 8px;
+        padding: 2px 8px;
+        &:hover {
+            background: $goud;
+            color: $bcstar-topbar-color;
+        }
+    }
+}
+/* -------------------------------------------------------------------------------------------
+ * Plugin Subscribe 2
+ */
+
+#s2-form {
+    label {
+        font-size: $base-font-size;
+    }
+    input[type="submit"] {
+        margin-right: 1rem;
+        padding: $button-med (2*$button-med) (1.0625*$button-med);
+        border: 0;
+        background: $button-bg-color;
+        color: $button-font-color;
+        &:hover {
+            background: $button-bg-hover;
+        }
+    }
+}
+/* -------------------------------------------------------------------------------------------
+ * Plugin TablePress
+ */
+div.dataTables_wrapper {
+    overflow-x: auto;                           // Alternative for TablePress built-in horizontal scroll,
+    overflow-y: hidden;                         // which gives problems with responsive themes
+    .dataTables_filter {
+        margin-bottom: 1rem;
+    }
+    .dataTables_length {
+        @extend .dataTables_filter;
+        select {
+            width: 4rem;
+        }
+    }    
+    .tablepress {
+        box-sizing: border-box;                 // Required to get header and content columns aligned
+        border: $table-border-size $table-border-style $table-border-color;
+        &.auto-width {
+            width: auto;
+        }
+        th {
+            border: 0;
+            padding: $table-row-padding;
+            background: $table-border-color;
+            color: $header-font-color;
+            font-size: 67%;
+//            text-align: center;
+        }
+        tr {
+            &:nth-child(odd) {
+                background: transparent;
+            }
+            &:nth-child(even) {
+                background: $table-even-row-bg;
+            }
+        }
+        td {
+            border: 0;
+            padding: $table-row-padding;
+            vertical-align: middle;
+        }
+    }
+    .dataTables_paginate {
+        margin-top: 1rem;
+        padding: 4px;
+        background: $table-border-color;
+        vertical-align: middle;
+        .paginate_button {
+            margin: 0;
+            padding: 1px 8px;
+            font-size: 14px;
+            line-height: 150%;
+            text-decoration: none;
+            color: $anchor-font-color !important;
+            &:hover {
+                background: $white;
+                color: $anchor-font-color-hover !important;
+            }
+            &.current {
+                background: $primary-color;
+                color: $white !important;
+            }
+            &.disabled {
+                background: transparent;
+                color: $white !important;
+            }
+        }
+    }
+}

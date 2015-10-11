@@ -3,268 +3,269 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: foundationpress-libsass-template 5.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-13 17:56+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2015-06-26 12:07+0100\n"
+"PO-Revision-Date: 2015-06-26 12:09+0100\n"
+"Last-Translator: Webmaster BC Star <webmaster@bcstar.nl>\n"
+"Language-Team: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\\\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:8
+#: 404.php:17
 msgid "File Not Found"
 msgstr ""
 
-#: 404.php:12
+#: 404.php:21
 msgid ""
 "The page you are looking for might have been removed, had its name changed, "
 "or is temporarily unavailable."
 msgstr ""
 
-#: 404.php:14
+#: 404.php:23
 msgid "Please try the following:"
 msgstr ""
 
-#: 404.php:16
+#: 404.php:25
 msgid "Check your spelling"
 msgstr ""
 
-#: 404.php:17
+#: 404.php:26
 #, php-format
 msgid "Return to the <a href=\"%s\">home page</a>"
 msgstr ""
 
-#: 404.php:18
+#: 404.php:27
 msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
 msgstr ""
 
-#. /previous pages when applicable
-#: archive.php:21 index.php:24 search.php:25
+#: archive.php:43 index.php:41 search.php:39
 msgid "&larr; Older posts"
 msgstr ""
 
-#: archive.php:22 index.php:25 search.php:26
+#: archive.php:44 index.php:42 search.php:40
 msgid "Newer posts &rarr;"
 msgstr ""
 
-#: comments.php:8
-#, php-format
-msgid "<cite class=\"fn\">%s</cite>"
-msgstr ""
-
-#: comments.php:9
-#, php-format
-msgid "%1$s"
-msgstr ""
-
-#: comments.php:10
-msgid "(Edit)"
-msgstr ""
-
-#: comments.php:16
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: comments.php:31
-msgid "Please do not load this page directly. Thanks!"
+#: comments.php:27
+msgid "Reply"
 msgstr ""
 
 #: comments.php:36
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:55
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: comments.php:60
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: comments.php:46
-msgid "No Responses to"
-msgstr ""
-
-#: comments.php:46
-msgid "One Response to"
-msgstr ""
-
-#: comments.php:46
-msgid "% Responses to"
-msgstr ""
-
-#: comments.php:53
-msgid "&larr; Older comments"
-msgstr ""
-
-#: comments.php:54
-msgid "Newer comments &rarr;"
-msgstr ""
-
-#: comments.php:61
+#: comments.php:73
 msgid "Leave a Reply"
 msgstr ""
 
-#: comments.php:61
+#: comments.php:73
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:76
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: comments.php:68
+#: comments.php:80
 #, php-format
 msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
 msgstr ""
 
-#: comments.php:68
+#: comments.php:80
 msgid "Log out of this account"
 msgstr ""
 
-#: comments.php:68
+#: comments.php:80
 msgid "Log out &raquo;"
 msgstr ""
 
-#: comments.php:71
+#: comments.php:85
 msgid "Name"
 msgstr ""
 
-#: comments.php:71 comments.php:75
+#: comments.php:85 comments.php:93
 msgid " (required)"
 msgstr ""
 
-#: comments.php:75
+#: comments.php:93
 msgid "Email (will not be published)"
 msgstr ""
 
-#: comments.php:79
+#: comments.php:101
 msgid "Website"
 msgstr ""
 
-#: comments.php:84
+#: comments.php:110
 msgid "Comment"
 msgstr ""
 
-#: comments.php:87
+#: comments.php:117
 msgid "You can use these tags:"
 msgstr ""
 
-#: comments.php:88
-msgid "Submit Comment"
-msgstr ""
-
-#: content-none.php:11
+#: content-none.php:15
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:17
+#: content-none.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:21
+#: content-none.php:25
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: content-none.php:26
+#: content-none.php:30
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#. /archive/search.
-#. *
-#. * @subpackage FoundationPress
-#. * @since FoundationPress 1.0.0
-#.
-#: content.php:16
+#: content.php:20
 msgid "Continue reading..."
 msgstr ""
 
-#: hero.php:40 kitchen-sink.php:739 page-full.php:19 page-sidebar-left.php:21
-#: page.php:18 single.php:27 woocommerce.php:18
-msgid "Pages:"
+#: library/#bcstar-functions.php:38
+msgid "Left sidebar widgets"
 msgstr ""
 
-#: library/entry-meta.php:4
+#: library/#bcstar-functions.php:39 library/#bcstar-functions.php:49
+#: library/widget-areas.php:15
+msgid "Drag widgets to this sidebar container."
+msgstr ""
+
+#: library/#bcstar-functions.php:48
+msgid "Right sidebar widgets"
+msgstr ""
+
+#: library/#bcstar-functions.php:58 library/widget-areas.php:24
+msgid "Footer widgets"
+msgstr ""
+
+#: library/#bcstar-functions.php:59 library/widget-areas.php:25
+msgid "Drag widgets to this footer container"
+msgstr ""
+
+#: library/entry-meta.php:12
 #, php-format
 msgid "Posted on %s at %s."
 msgstr ""
 
-#: library/entry-meta.php:5
+#: library/entry-meta.php:13
 msgid "Written by"
 msgstr ""
 
-#: library/foundation.php:16
+#: library/foundation.php:25
 msgid "&laquo;"
 msgstr ""
 
-#: library/foundation.php:17
+#: library/foundation.php:26
 msgid "&raquo;"
 msgstr ""
 
-#: library/foundation.php:40
+#: library/foundation.php:54
 #, php-format
 msgid ""
 "Please assign a menu to the primary menu location under %1$s or %2$s the "
 "design."
 msgstr ""
 
-#: library/foundation.php:41
+#: library/foundation.php:55
 #, php-format
 msgid "<a href=\"%s\">Menus</a>"
 msgstr ""
 
-#: library/foundation.php:44
+#: library/foundation.php:58
 #, php-format
 msgid "<a href=\"%s\">Customize</a>"
 msgstr ""
 
-#: library/widget-areas.php:6
+#: library/foundation.php:106
+msgid "No Responses to"
+msgstr ""
+
+#: library/foundation.php:106
+msgid "One Response to"
+msgstr ""
+
+#: library/foundation.php:106
+msgid "% Responses to"
+msgstr ""
+
+#: library/foundation.php:146
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#: library/foundation.php:147
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: library/navigation.php:238
+msgid "Page"
+msgstr ""
+
+#: library/offcanvas-walker.php:35
+msgid "Back"
+msgstr ""
+
+#: library/widget-areas.php:14
 msgid "Sidebar widgets"
 msgstr ""
 
-#: library/widget-areas.php:7
-msgid "Drag widgets to this sidebar container."
+#: page.php:37 single.php:42 templates/hero.php:40
+#: templates/kitchen-sink.php:730 templates/page-full.php:25
+#: templates/page-sidebar-left.php:27 templates/page-sidebar-wide-left.php:27
+#: woocommerce.php:27
+msgid "Pages:"
 msgstr ""
 
-#: library/widget-areas.php:16
-msgid "Footer widgets"
-msgstr ""
-
-#: library/widget-areas.php:17
-msgid "Drag widgets to this footer container"
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-file.php:3
-msgid "I'm a translatable string."
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:4
-msgid "Me too"
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:7
-#, php-format
-msgid "I have %d apple"
-msgid_plural "I have %d apples"
-msgstr[0] ""
-msgstr[1] ""
-
-#. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
-msgid "yyyy-mm-dd"
-msgstr ""
-
-#: search.php:7
+#: search.php:21
 msgid "Search Results for"
 msgstr ""
 
-#: searchform.php:6 searchform.php:10
-msgid "Search"
+#: tml-login-form.php:11
+msgid "Username"
+msgstr ""
+
+#: tml-login-form.php:17
+msgid "Password"
+msgstr ""
+
+#: js/vendor/jquery.js:14
+msgid "<iframe frameborder='0' width='0' height='0'/>"
+msgstr ""
+
+#: js/vendor/jquery.js:27
+msgid "<script>"
+msgstr ""
+
+#: js/vendor/jquery.js:27
+msgid "<div>"
 msgstr ""

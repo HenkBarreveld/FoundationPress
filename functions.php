@@ -21,6 +21,9 @@ require_once( 'library/cleanup.php' );
 /** Required for Foundation to work properly */
 require_once( 'library/foundation.php' );
 
+// ***** Added for FoundationPressStar *****
+require_once('library/#bcstar-functions.php');
+
 /** Register all navigation menus */
 require_once( 'library/navigation.php' );
 

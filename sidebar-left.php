@@ -4,12 +4,18 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @since FoundationPress 1.0
  */
 
 ?>
-<aside id="sidebar" class="small-12 large-4 columns large-pull-8">
+
+<!-- ***** Mod for BC Star website *****
+       - Different classes for aside
+       - Call dynamic_sidebar with left-sidebar-widgets instead of sidebar-widgets
+-->
+
+<aside id="sidebar" class="small-12 medium-6 medium-pull-3 large-3 large-pull-9 columns">
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
-	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
+	<?php dynamic_sidebar( 'left-sidebar-widgets' ); ?>
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>
 </aside>

@@ -4,13 +4,17 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @since FoundationPress 1.0
  */
 
 get_header(); ?>
 
 <div class="row">
-	<div class="small-12 large-8 columns" role="main">
+    
+<!-- ***********************************
+     ***** Mod for BC Star website *****
+     *********************************** -->
+	<div class="small-12 large-9 columns" role="main">
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -40,6 +44,9 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-	<?php get_sidebar(); ?>
-</div>
+<!-- ***********************************
+     ***** Mod for BC Star website *****
+     *********************************** -->
+	<?php get_sidebar( 'right' ); ?>
+
 <?php get_footer(); ?>

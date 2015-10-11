@@ -1,19 +1,28 @@
 <?php
 /*
-Template Name: Left Sidebar
+Template Name: Left Sidebar, top of page
 */
 get_header(); ?>
-
-<?php get_template_part( 'parts/featured-image' ); ?>
+<?php
+// *************************************
+// ***** Added for BC Star website *****
+// *************************************
+// Similar to page-sidebar-left.php, except that on medium-down screens
+// the sidebar comes above the article
+?>
 
 <div class="row">
+    
 <?php
-// ***********************************
-// ***** Mod for BC Star website *****
-// ***********************************
-// column widths on large screens 3-9 instead of 4-8
+// aside is similar to sidebar.php contents
 ?>
-    <div class="small-12 large-9 large-push-3 columns" role="main">
+    <aside id="sidebar" class="small-12 large-3 columns">
+	   <?php do_action( 'foundationpress_before_sidebar' ); ?>
+	   <?php dynamic_sidebar( 'left-sidebar-widgets' ); ?>
+	   <?php do_action( 'foundationpress_after_sidebar' ); ?>
+    </aside>
+    
+    <div class="small-12 large-9 columns" role="main">
 
         <?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -39,6 +48,5 @@ get_header(); ?>
         <?php do_action( 'foundationpress_after_content' ); ?>
 
     </div>
-    <?php get_sidebar( 'left' ); ?>
 </div>
 <?php get_footer(); ?>

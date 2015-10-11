@@ -1,19 +1,22 @@
 <?php
 /*
-Template Name: Left Sidebar
+Template Name: Left Wide Sidebar
 */
 get_header(); ?>
+<?php
+// *************************************
+// ***** Added for BC Star website *****
+// *************************************
+// Copy of template file page-sidebar-left.php, with changes:
+//	 - Template name
+//   - Classes for div role="main" from medium up instead of large
+//   - Sidebar wide-left instead of left
+?>
 
 <?php get_template_part( 'parts/featured-image' ); ?>
 
 <div class="row">
-<?php
-// ***********************************
-// ***** Mod for BC Star website *****
-// ***********************************
-// column widths on large screens 3-9 instead of 4-8
-?>
-    <div class="small-12 large-9 large-push-3 columns" role="main">
+    <div class="small-12 medium-8 medium-push-4 columns" role="main">
 
         <?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -39,6 +42,6 @@ get_header(); ?>
         <?php do_action( 'foundationpress_after_content' ); ?>
 
     </div>
-    <?php get_sidebar( 'left' ); ?>
+    <?php get_sidebar( 'wide-left' ); ?>
 </div>
 <?php get_footer(); ?>

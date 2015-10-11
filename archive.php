@@ -13,14 +13,17 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @since FoundationPress 1.0
  */
 
 get_header(); ?>
 
 <div class="row">
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+<!-- ***********************************
+     ***** Mod for BC Star website *****
+     *********************************** -->
+	<div class="small-12 large-9 columns" role="main">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -43,6 +46,9 @@ get_header(); ?>
 	<?php } ?>
 
 	</div>
-	<?php get_sidebar(); ?>
+<!-- ***********************************
+     ***** Mod for BC Star website *****
+     *********************************** -->
+	<?php get_sidebar( 'right' ); ?>
 </div>
 <?php get_footer(); ?>

@@ -2,101 +2,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FoundationPress v5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-11-01 13:28+0100\n"
-"Last-Translator: violacase <violacase@gmail.com>\n"
+"POT-Creation-Date: 2015-06-26 12:07+0100\n"
+"PO-Revision-Date: 2015-06-26 12:15+0100\n"
+"Last-Translator: Webmaster BC Star <webmaster@bcstar.nl>\n"
 "Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Textdomain-Support: yes\n"
-"Language: nl\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ FoundationPress
-#: comments.php:71
-msgid "Name"
-msgstr "Naam"
-
-# @ FoundationPress
-#: comments.php:88
-msgid "Submit Comment"
-msgstr "Verzend commentaar"
-
-# @ FoundationPress
-#: comments.php:68
-msgid "Log out of this account"
-msgstr "Uitloggen met dit account"
-
-# @ FoundationPress
-#: comments.php:68
-msgid "Log out &raquo;"
-msgstr "Uitloggen &raquo;"
-
-# @ FoundationPress
-#: comments.php:36
-msgid "This post is password protected. Enter the password to view comments."
-msgstr ""
-"Deze post is beveiligd met een wachtwoord. Voer uw wachtwoord in om "
-"commentaar te zien."
-
-# @ FoundationPress
-#: comments.php:79
-msgid "Website"
-msgstr "Website"
-
-# @ FoundationPress
-#: comments.php:64
-#, php-format
-msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
-"U dient <a href=\"%s\">aangemeld</a> te zijn indien u iets wilt schrijven."
-
-# @ FoundationPress
-#: hero.php:40 kitchen-sink.php:739 page-full.php:19 page-sidebar-left.php:21
-#: page.php:18 single.php:27 woocommerce.php:18
-msgid "Pages:"
-msgstr "Pagina's:"
-
-# @ FoundationPress
-#: comments.php:16
-msgid "Your comment is awaiting moderation."
-msgstr "Uw kommentaar wacht op goedkeuring."
-
-# @ FoundationPress
-#: comments.php:10
-msgid "(Edit)"
-msgstr "(Bewerken)"
-
-# @ FoundationPress
-#: comments.php:61
-msgid "Leave a Reply"
-msgstr "Geef een reactie"
-
-# @ FoundationPress
-#: comments.php:61
-#, php-format
-msgid "Leave a Reply to %s"
-msgstr "Geef een reactie op %s"
-
-# @ FoundationPress
-#: searchform.php:6 searchform.php:10
-msgid "Search"
-msgstr "Zoeken"
-
-# @ FoundationPress
-#: 404.php:8
+#: 404.php:17
 msgid "File Not Found"
 msgstr "Bestand niet gevonden"
 
 # @ FoundationPress
-#: 404.php:12
+#: 404.php:21
 msgid ""
 "The page you are looking for might have been removed, had its name changed, "
 "or is temporarily unavailable."
@@ -105,111 +34,128 @@ msgstr ""
 "is tijdelijk niet bereikbaar."
 
 # @ FoundationPress
-#: 404.php:14
+#: 404.php:23
 msgid "Please try the following:"
 msgstr "Probeer a.u.b. het volgende:"
 
 # @ FoundationPress
-#: 404.php:16
+#: 404.php:25
 msgid "Check your spelling"
 msgstr "Controleer uw spelling"
 
 # @ FoundationPress
-#: 404.php:17
+#: 404.php:26
 #, php-format
 msgid "Return to the <a href=\"%s\">home page</a>"
 msgstr "Terug naar de <a href=\"%s\">home pagina</a>"
 
 # @ FoundationPress
-#: 404.php:18
+#: 404.php:27
 msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
 msgstr "Klik op de <a href=\"javascript:history.back()\">Terug<a> knop"
 
 # @ FoundationPress
-#: archive.php:21 index.php:24 search.php:25
+#: archive.php:43 index.php:41 search.php:39
 msgid "&larr; Older posts"
 msgstr "&larr; Oudere berichten"
 
 # @ FoundationPress
-#: archive.php:22 index.php:25 search.php:26
+#: archive.php:44 index.php:42 search.php:40
 msgid "Newer posts &rarr;"
 msgstr "Nieuwere berichten &rarr;"
 
-# @ FoundationPress
-#: comments.php:8
-#, php-format
-msgid "<cite class=\"fn\">%s</cite>"
-msgstr ""
+#: comments.php:27
+msgid "Reply"
+msgstr "Reactie"
 
 # @ FoundationPress
-#: comments.php:9
-#, php-format
-msgid "%1$s"
-msgstr ""
+#: comments.php:36
+msgid "Your comment is awaiting moderation."
+msgstr "Uw kommentaar wacht op goedkeuring."
 
 # @ FoundationPress
-#: comments.php:31
+#: comments.php:55
 msgid "Please do not load this page directly. Thanks!"
 msgstr "Gelieve deze pagina niet direct aan te roepen. Bedankt!"
 
 # @ FoundationPress
-#: comments.php:46
-msgid "No Responses to"
-msgstr "Geen antwoorden op"
+#: comments.php:60
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Deze post is beveiligd met een wachtwoord. Voer uw wachtwoord in om "
+"commentaar te zien."
 
 # @ FoundationPress
-#: comments.php:46
-msgid "One Response to"
-msgstr "Een antwoord op"
+#: comments.php:73
+msgid "Leave a Reply"
+msgstr "Geef een reactie"
 
 # @ FoundationPress
-#: comments.php:46
-msgid "% Responses to"
-msgstr "% Antwoorden op"
+#: comments.php:73
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Geef een reactie op %s"
 
 # @ FoundationPress
-#: comments.php:53
-msgid "&larr; Older comments"
-msgstr "&larr; ouder commentaar"
+#: comments.php:76
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"U dient <a href=\"%s\">aangemeld</a> te zijn indien u iets wilt schrijven."
 
 # @ FoundationPress
-#: comments.php:54
-msgid "Newer comments &rarr;"
-msgstr "Nieuwer commentaar &rarr;"
-
-# @ FoundationPress
-#: comments.php:68
+#: comments.php:80
 #, php-format
 msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
 msgstr "Ingelogd als <a href=\"%s/wp-admin/profile.php\">%s</a>."
 
 # @ FoundationPress
-#: comments.php:71 comments.php:75
+#: comments.php:80
+msgid "Log out of this account"
+msgstr "Uitloggen met dit account"
+
+# @ FoundationPress
+#: comments.php:80
+msgid "Log out &raquo;"
+msgstr "Uitloggen &raquo;"
+
+# @ FoundationPress
+#: comments.php:85
+msgid "Name"
+msgstr "Naam"
+
+# @ FoundationPress
+#: comments.php:85 comments.php:93
 msgid " (required)"
 msgstr "(verplicht)"
 
 # @ FoundationPress
-#: comments.php:75
+#: comments.php:93
 msgid "Email (will not be published)"
 msgstr "Email (wordt niet gepubliceerd)"
 
 # @ FoundationPress
-#: comments.php:84
+#: comments.php:101
+msgid "Website"
+msgstr "Website"
+
+# @ FoundationPress
+#: comments.php:110
 msgid "Comment"
 msgstr "Commentaar"
 
 # @ FoundationPress
-#: comments.php:87
+#: comments.php:117
 msgid "You can use these tags:"
 msgstr "U kunt deze tags gebruiken:"
 
 # @ FoundationPress
-#: content-none.php:11
+#: content-none.php:15
 msgid "Nothing Found"
 msgstr "Niets gevonden"
 
 # @ FoundationPress
-#: content-none.php:17
+#: content-none.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
@@ -217,7 +163,7 @@ msgstr ""
 "Klaar om uw eerste bericht te publiceren? <a href=\"%1$s\">Start hier</a>"
 
 # @ FoundationPress
-#: content-none.php:21
+#: content-none.php:25
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -226,40 +172,66 @@ msgstr ""
 "met andere sleutelwoorden."
 
 # @ FoundationPress
-#: content-none.php:26
+#: content-none.php:30
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "We kunnen dit helaas niet vinden. Misschien helpt zoeken."
 
 # @ FoundationPress
-#: content.php:16
+#: content.php:20
 msgid "Continue reading..."
 msgstr "Verder lezen..."
 
 # @ FoundationPress
-#: library/entry-meta.php:4
+#: library/#bcstar-functions.php:38
+msgid "Left sidebar widgets"
+msgstr "Linker zijbalk widgets"
+
+# @ FoundationPress
+#: library/#bcstar-functions.php:39 library/#bcstar-functions.php:49
+#: library/widget-areas.php:15
+msgid "Drag widgets to this sidebar container."
+msgstr "Drag widgets naar de zijbar-container."
+
+# @ FoundationPress
+#: library/#bcstar-functions.php:48
+msgid "Right sidebar widgets"
+msgstr "Rechter zijbalk widgets"
+
+# @ FoundationPress
+#: library/#bcstar-functions.php:58 library/widget-areas.php:24
+msgid "Footer widgets"
+msgstr "Footer-widgets"
+
+# @ FoundationPress
+#: library/#bcstar-functions.php:59 library/widget-areas.php:25
+msgid "Drag widgets to this footer container"
+msgstr "Drag widgets naar de footer-container"
+
+# @ FoundationPress
+#: library/entry-meta.php:12
 #, php-format
 msgid "Posted on %s at %s."
 msgstr "Gepost op %s te %s."
 
 # @ FoundationPress
-#: library/entry-meta.php:5
+#: library/entry-meta.php:13
 msgid "Written by"
 msgstr "Geschreven door"
 
 # @ FoundationPress
-#: library/foundation.php:16
+#: library/foundation.php:25
 msgid "&laquo;"
 msgstr "&laquo;"
 
 # @ FoundationPress
-#: library/foundation.php:17
+#: library/foundation.php:26
 msgid "&raquo;"
 msgstr "&raquo;"
 
 # @ FoundationPress
-#: library/foundation.php:40
+#: library/foundation.php:54
 #, php-format
 msgid ""
 "Please assign a menu to the primary menu location under %1$s or %2$s the "
@@ -269,38 +241,107 @@ msgstr ""
 "%2$s van het ontwerp."
 
 # @ FoundationPress
-#: library/foundation.php:41
+#: library/foundation.php:55
 #, php-format
 msgid "<a href=\"%s\">Menus</a>"
 msgstr "<a href=\"%s\">Menu's</a>"
 
 # @ FoundationPress
-#: library/foundation.php:44
+#: library/foundation.php:58
 #, php-format
 msgid "<a href=\"%s\">Customize</a>"
 msgstr "<a href=\"%s\">Aanpassen</a>"
 
 # @ FoundationPress
-#: library/widget-areas.php:6
+#: library/foundation.php:106
+msgid "No Responses to"
+msgstr "Geen antwoorden op"
+
+# @ FoundationPress
+#: library/foundation.php:106
+msgid "One Response to"
+msgstr "Een antwoord op"
+
+# @ FoundationPress
+#: library/foundation.php:106
+msgid "% Responses to"
+msgstr "% Antwoorden op"
+
+# @ FoundationPress
+#: library/foundation.php:146
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
+
+# @ FoundationPress
+#: library/foundation.php:147
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+# @ FoundationPress
+#: library/navigation.php:238
+msgid "Page"
+msgstr "Pagina"
+
+#: library/offcanvas-walker.php:35
+msgid "Back"
+msgstr "Terug"
+
+# @ FoundationPress
+#: library/widget-areas.php:14
 msgid "Sidebar widgets"
 msgstr "Zijbar-widgets"
 
 # @ FoundationPress
-#: library/widget-areas.php:7
-msgid "Drag widgets to this sidebar container."
-msgstr "Drag widgets naar de zijbar-container."
+#: page.php:37 single.php:42 templates/hero.php:40
+#: templates/kitchen-sink.php:730 templates/page-full.php:25
+#: templates/page-sidebar-left.php:27 templates/page-sidebar-wide-left.php:27
+#: woocommerce.php:27
+msgid "Pages:"
+msgstr "Pagina's:"
 
 # @ FoundationPress
-#: library/widget-areas.php:16
-msgid "Footer widgets"
-msgstr "Footer-widgets"
-
-# @ FoundationPress
-#: library/widget-areas.php:17
-msgid "Drag widgets to this footer container"
-msgstr "Drag widgets naar de footer-container"
-
-# @ FoundationPress
-#: search.php:7
+#: search.php:21
 msgid "Search Results for"
 msgstr "Zoekresultaten voor"
+
+#: tml-login-form.php:11
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: tml-login-form.php:17
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: js/vendor/jquery.js:14
+msgid "<iframe frameborder='0' width='0' height='0'/>"
+msgstr ""
+
+#: js/vendor/jquery.js:27
+msgid "<script>"
+msgstr ""
+
+#: js/vendor/jquery.js:27
+msgid "<div>"
+msgstr ""
+
+# @ FoundationPress
+#~ msgid "Submit Comment"
+#~ msgstr "Verzend commentaar"
+
+# @ FoundationPress
+#~ msgid "(Edit)"
+#~ msgstr "(Bewerken)"
+
+# @ FoundationPress
+#~ msgid "Search"
+#~ msgstr "Zoeken"
+
+# @ FoundationPress
+#~ msgid "&larr; Older comments"
+#~ msgstr "&larr; ouder commentaar"
+
+# @ FoundationPress
+#~ msgid "Newer comments &rarr;"
+#~ msgstr "Nieuwer commentaar &rarr;"

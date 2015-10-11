@@ -8,9 +8,15 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+?>
+<?php
+// ***********************************
+// ***** Mod for BC Star website *****
+// ***********************************
+// Enclosed complete content in <article> element, for styling purposes
 ?>
 
+<article>
 <header class="page-header">
 	<h1 class="page-title"><?php _e( 'Nothing Found', 'foundationpress' ); ?></h1>
 </header>
@@ -32,3 +38,4 @@
 
 	<?php endif; ?>
 </div>
+</article>

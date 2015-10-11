@@ -17,7 +17,11 @@
 get_header(); ?>
 
 <div class="row">
-	<?php get_template_part( 'parts/check-if-sidebar-exist' ); ?>
+    <!-- ***********************************
+     ***** Mod for BC Star website *****
+     *********************************** -->
+	<?php /*get_template_part( 'parts/check-if-sidebar-exist' );*/ ?>
+	<div class="small-12 large-9 columns" role="main">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -46,6 +50,9 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-	<?php get_sidebar(); ?>
+<!-- ***********************************
+     ***** Mod for BC Star website *****
+     *********************************** -->
+	<?php get_sidebar( 'right' ); ?>
 </div>
 <?php get_footer(); ?>
