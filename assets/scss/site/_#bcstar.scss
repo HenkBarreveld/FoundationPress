@@ -5,6 +5,7 @@
  *   - Masthead and topbar
  *   - Content styling
  *   - Some additional footer styling
+ *   - "Start" page
  *   - "Nieuws" pages
  *   - Entry-meta (date, time, author)
  *   - "Uitslagen" pages
@@ -36,24 +37,37 @@ a {
 .f-topbar-fixed .masthead {
     display: none;      // To remove a strange effect on iOS: If topbar is fixed, the masthead
     // appears behind and partly below it. It looks like (undocumented!)
-    // that the tag body has class .f-topbar-fixed if topbar has class fixed.
-
+    // that if topbar has class fixed, then the body has class .f-topbar-fixed.
 }
+$masthead-height: 12rem;
+$site-logo-height: 8rem;
+$site-name-height: 6rem;
 .masthead {
     background: $bcstar-masthead-color;
 }
 .site-logo {
-    line-height: 11rem;
+    line-height: $masthead-height / $row-width * 100vw;
+    img {
+        height: $site-logo-height / $row-width * 100vw;
+    }
+    @media #{$large-up} {
+        line-height: $masthead-height / $row-width * 1000px;
+        img {
+            height: $site-logo-height / $row-width * 1000px;
+        }
+    }
 }
 .site-name a {
     font-family: $header-font-family;
-    font-size: 4.5rem;
-    font-weight: $font-weight-normal;
-    @media #{$large-up} {
-        font-size: rem-calc(96);
-    }
-    line-height:12rem;
+    font-size: 10vw;
+    font-weight: $font-weight-light;
     color:$white;
+    line-height: $masthead-height / $row-width * 100vw;
+    font-size: $site-name-height / $row-width * 100vw;
+    @media #{$large-up} {
+        line-height: $masthead-height / $row-width * 1000px;
+        font-size: $site-name-height / $row-width * 1000px;
+    }
 }
 /*
  * Topbar
@@ -128,6 +142,12 @@ body.page header {
     display: none;
 }
 
+// When scrolling up, reduce page content "jumping" when topbar gets fixed
+
+.f-topbar-fixed section.container {
+    padding-top: $topbar-height;
+}
+
 // Styling of articles
 
 $article-bottom-margin: 2rem;
@@ -149,16 +169,19 @@ a.scroll-to-top {
     display: none;
 }
 .f-topbar-fixed a.scroll-to-top {
-    background: rgba($button-bg-color, 0.5);
+    font-size: $paragraph-font-size * 0.75;
+    background: rgba($button-bg-color, 0.3);
+    color: rgba($button-font-color, 0.7);
     &:hover {
         background: rgba($button-bg-color, 1.0);
+        color: rgba($button-font-color, 1.0);
     }
     display: block;
     position: fixed;
     right: 0;
     bottom: 120px;
     z-index: 99999;
-    padding: 3px 6px 6px 6px;
+    padding: 4px 10px;
     &::before {
         font-family: FontAwesome;
         content: "\f062"; // fa-arrow-up
@@ -177,7 +200,7 @@ a.scroll-to-top {
     display: none;                               // Hide the title of text widgets
 }
 // Some additional table styling
-// Note: styling of TablePress tables in separate section (affects more tha table contents)
+// Note: styling of TablePress tables in separate section (affects more than table contents)
 
 table {
     td {
@@ -207,10 +230,12 @@ table {
     }
     &.tableizer-table {                          // Tables produced with http://tableizer.journalistopia.com/
         border: 0;
+        background: transparent;                 // For these tables the <table> can be wider than the <tbody>
         tbody {
             border-style: $table-border-style;
             border-size: $table-border-size;
             border-color: $table-border-color;
+            background: $table-bg;
         }
         overflow-x: auto;
         display: block;
@@ -224,7 +249,7 @@ table {
         tr {
             &:nth-child(even) {
                 background: transparent;
-            }
+            }margin: 0;
             &:nth-child(odd) {
                 background: $table-even-row-bg;
             }
@@ -341,33 +366,57 @@ p.wp-caption-text {
         }
     }
 }
+.cookies-not-accepted #footer-container #footer {
+    padding-bottom: $paragraph-margin-bottom;
+}
+/* -------------------------------------------------------------------------------------------
+ * "Start" pagina
+ */
+$welcome-height: 3.4rem;
+h1.welcome {
+    text-align: center;
+    margin: 30px 0;
+    font-size:  $welcome-height / $row-width * $small-breakpoint;
+    @media #{$medium-only} {
+        font-size: $welcome-height / $row-width * 100vw;
+    }
+    @media #{$large-up} {
+        font-size: $welcome-height / $row-width * $medium-breakpoint;
+    }
+}
 /* -------------------------------------------------------------------------------------------
  * "Nieuws" pagina
  */
 /*
  * News page widgets
  */
-#sidebar-right article {
-    margin: 0;
-    border-bottom: 2px solid $white;
-    padding: 1rem 0 0 0;
-    &:first-of-type {
-        border-top: 2px solid $white;
-    }
-    >div {
-        padding: 0;
-    }
-    h6 {
-        margin: 0 0 1rem 0;
-    }
-    .icons {
-        float: right;
-        font-size: 1.2em;
-    }
-    &.widget_jal_widget {
-        margin-bottom: -1rem;
-        border: 0;
-        padding-bottom: 0;
+#sidebar-right {
+    margin-bottom: $article-bottom-margin;
+    article {
+        margin: 0;
+        border-bottom: 2px solid $white;
+        padding: 1rem 0 0 0;
+        &:first-of-type {
+            border-top: 2px solid $white;
+        }
+        >div {
+            padding: 0;
+        }
+        h6 {
+            margin: 0 0 1rem 0;
+        }
+        .icons {
+            float: right;
+            font-size: 1.2em;
+        }
+        &.widget_jal_widget {
+            margin-bottom: -1rem;
+            border: 0;
+            padding-bottom: 0;
+        }
+        .jaw_widget {
+            margin-bottom: 0;
+        }
     }
 }
 /*

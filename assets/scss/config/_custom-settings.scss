@@ -18,7 +18,7 @@
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-$base-font-size: 15px;
+$base-font-size: 16px;
 $rem-base: $base-font-size;
 
 // The $base-font-size is 100% while $base-line-height is 150%
@@ -43,7 +43,10 @@ $column-gutter: rem-calc(30);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "usual", Helvetica, Arial, sans-serif;
+// $font-family-sans-serif: "macha", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "acumin-pro", Helvetica, Arial, sans-serif;
+// $font-family-sans-serif: "semplicitapro", Helvetica, Arial, sans-serif;
+// $font-family-sans-serif: "rooney-sans", Helvetica, Arial, sans-serif;
 $font-family-sans-serif-large: "futura-pt", Helvetica, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // if serif needed, use FF Tisa Pro
@@ -97,7 +100,7 @@ $bcstar-topbar-color-sub: scale-color($bcstar-topbar-color, $lightness: 8%);
 $bcstar-topbar-color-sub-sub: scale-color($bcstar-topbar-color-sub, $lightness: 8%);
 
 $body-bg: $bcstar-topbar-color;
-$body-font-color: $tuatara;
+$body-font-color: $jet;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
@@ -231,7 +234,7 @@ $h6-font-size: rem-calc(23);
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
 $paragraph-font-size: 1rem;
-$paragraph-line-height: 1.6;
+$paragraph-line-height: 1.5;
 // $paragraph-margin-bottom: rem-calc(20);
 $paragraph-margin-bottom: $paragraph-font-size;
 // $paragraph-aside-font-size: rem-calc(14);
@@ -475,10 +478,10 @@ $pagination-link-active-bg: $white;
 
 // $include-html-table-classes: $include-html-classes;
 
-// NOTE: All settings here can be overruled by <table class="no-rows"...
+// ***** NOTE: All settings here can be overruled by <table class="no-rows"...
 
 // These control the background color for the table and even rows
-// $table-bg: $white;
+$table-bg: $white;
 $table-even-row-bg: scale-color($inner-wrap-bg, $lightness: 60%);
 
 // These control the table cell border style
@@ -539,8 +542,8 @@ $topbar-margin-bottom: 0;
 // $topbar-link-color-hover: $white;
 $topbar-link-color-active: $bcstar-topbar-active-color;
 $topbar-link-color-active-hover: $bcstar-topbar-active-color;
-$topbar-link-weight: $font-weight-light;
-$topbar-link-font-size: rem-calc(13);
+$topbar-link-weight: $font-weight-normal;
+$topbar-link-font-size: rem-calc(14);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $bcstar-topbar-color;
 // $topbar-link-bg-color-hover: $bcstar-topbar-color-sub; // Does not seem to be used
@@ -561,7 +564,7 @@ $topbar-dropdown-bg: $bcstar-topbar-color-sub;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
 $topbar-dropdown-link-bg: $bcstar-topbar-color-sub;
 $topbar-dropdown-link-bg-hover: $bcstar-topbar-color-sub-sub;
-$topbar-dropdown-link-weight: $font-weight-light;
+$topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
 // $topbar-dropdown-toggle-alpha: .4;

@@ -57,7 +57,7 @@
 
     <!-- ***** Mod for BC Star website ***** -->
     <!-- ***** 'Scroll to top' button ***** -->
-<a class="scroll-to-top button"><br/>TOP</a>
+        <a class="scroll-to-top button"><br/>TOP</a>
 
 <section class="container" role="document">
 	<?php do_action( 'foundationpress_after_header' ); ?>

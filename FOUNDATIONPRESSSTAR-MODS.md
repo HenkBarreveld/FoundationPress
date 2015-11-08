@@ -2,7 +2,7 @@
 
 **Root:**
 
-\\ANTEC\Sandbox\xampp\htdocs\bcstar\wp-content\themes\FoundationPressStar
+.\bcstar\wp-content\themes\FoundationPressStar
 
 **Folder FoundationPressStar:**
 
